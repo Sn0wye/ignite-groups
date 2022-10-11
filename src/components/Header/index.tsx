@@ -1,14 +1,12 @@
 import logoImg from '@assets/logo.png';
+
 import { BackButton, BackIcon, Container, Logo } from './styles';
 
 interface Props {
-  showBackButton: boolean;
+  showBackButton?: boolean;
 }
 
-export const Header = ({
-  showBackButton = false
-}: Props) => {
-  
+export const Header = ({ showBackButton = false }: Props) => {
   return (
     <Container>
       {showBackButton && (
@@ -18,5 +16,5 @@ export const Header = ({
       )}
       <Logo source={logoImg} />
     </Container>
-  )
-}
+  );
+};
